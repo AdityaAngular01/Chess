@@ -3,73 +3,73 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <style>
-            *{
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            #container {
-                height: 100vh;
-                width: 100%;
-                background-color: #18181B;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            #chess-board {
-                height: 22rem;
-                width: 22rem;
-                background-color: #FB8181;
-                display: grid;
-            grid-template-columns: repeat(8, minmax(0, 1fr));
-            grid-template-rows: repeat(8, minmax(0, 1fr));
-            width: 400px;
-            height: 400px;
-            transform: rotate(0deg);
-            }
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			#container {
+				height: 100vh;
+				width: 100%;
+				background-color: #18181b;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.chess-board {
+				height: 22rem;
+				width: 22rem;
+				background-color: #fb8181;
+				display: grid;
+				grid-template-columns: repeat(8, minmax(0, 1fr));
+				grid-template-rows: repeat(8, minmax(0, 1fr));
+				width: 400px;
+				height: 400px;
+				transform: rotate(0deg);
+			}
 
-        .piece.white {
-            color: white;
-            filter: drop-shadow(0 0 2px rgba(0, 0, 0, 1));
-        }
-        .piece.black {
-            color: black;
-        }
-        .flipped {
-            transform: rotate(180deg);
-        }
-        .square {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .square.light {
-            background-color: #f0d9b5;
-        }
-        .square.dark {
-            background-color: #b58863;
-        }
-        .piece {
-            font-size: 36px;
-            cursor: pointer;
-        }
-        .piece.draggable {
-            cursor: grab;
-        }
-        .dragging {
-            opacity: 0.5;
-        }
-        /* Rotate pieces for black player */
-        .flipped .piece {
-            transform: rotate(180deg);
-        }
-        </style>
-    </head>
+			.piece.white {
+				color: white;
+				filter: drop-shadow(0 0 2px rgba(0, 0, 0, 1));
+			}
+			.piece.black {
+				color: black;
+			}
+			.flipped {
+				transform: rotate(180deg);
+			}
+			.square {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.square.light {
+				background-color: #f0d9b5;
+			}
+			.square.dark {
+				background-color: #b58863;
+			}
+			.piece {
+				font-size: 36px;
+				cursor: pointer;
+			}
+			.piece.draggable {
+				cursor: grab;
+			}
+			.dragging {
+				opacity: 0.5;
+			}
+			/* Rotate pieces for black player */
+			.flipped .piece {
+				transform: rotate(180deg);
+			}
+		</style>
+	</head>
 	<body>
 		<div id="container">
-            <div id="chess-board"></div>
-        </div>
+			<div class="chess-board"></div>
+		</div>
 
 		<script
 			src="https://cdn.socket.io/4.8.1/socket.io.min.js"
