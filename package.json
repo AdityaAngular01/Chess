@@ -4,7 +4,9 @@
   "description": "The Chess App",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app"
+    "dev": "nodemon app",
+    "start": "node app.js",
+    "build": "echo 'Building project assets...'"
   },
   "keywords": [
     "Chess",
